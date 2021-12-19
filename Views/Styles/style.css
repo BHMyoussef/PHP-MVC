@@ -3,23 +3,23 @@
   padding: 0;
 }
 
-ul {
+.pages {
   margin-top: 30px;
   padding: 10px 20px;
   text-align: center;
   margin-bottom: 50px;
 }
-ul li {
+.pages li {
   display: inline-block;
 }
-ul li a {
+.pages li a {
   text-decoration: none;
   color: #000;
   background-color: #ddd;
   padding: 10px 20px;
   font-size: 12pt;
 }
-ul li .active {
+.pages li .active {
   background-color: #aaa;
 }
 
@@ -57,3 +57,5 @@ ul li .active {
   text-align: center;
   text-decoration: none;
 }
+
+/* Statistics Page styles */
