@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin-top: 30px;
+  padding: 10px 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+ul li {
+  display: inline-block;
+}
+ul li a {
+  text-decoration: none;
+  color: #000;
+  background-color: #ddd;
+  padding: 10px 20px;
+  font-size: 12pt;
+}
+ul li .active {
+  background-color: #aaa;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.container .weekSchedule {
+  flex: 1;
+}
+.container .weekSchedule h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container .LoadingCalculation {
+  flex: 1;
+}
+.container .LoadingCalculation h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container div div {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+}
+.container div div a {
+  color: #000;
+  font-size: 12pt;
+  background-color: #ddd;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+}
