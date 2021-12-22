@@ -5,7 +5,7 @@ class Inputs
     function __construct()
     {
         try {
-            $this->db = new PDO('mysql:host=localhost;dbname=autoGestion', "root", "1234");
+            $this->db = new PDO('mysql:host=localhost;dbname=autoGestion', "root", "pass");
         } catch (Exception $e) {
             echo $e->getMessage();
         }
