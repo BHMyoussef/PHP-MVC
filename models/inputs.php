@@ -5,7 +5,7 @@ class Inputs
     function __construct()
     {
         try {
-            $this->db = new PDO('mysql:host=localhost;dbname=autoGestion', "root", "pass");
+            $this->db = new PDO('mysql:host=localhost;dbname=autoGestion', "root", "1234");
         } catch (Exception $e) {
             echo $e->getMessage();
         }
@@ -19,13 +19,18 @@ class Inputs
         return $statement;
     }
 
-    function getData()
+    function getData($categoryId)
     {
-        $statement = $this->db->prepare("select * from data");
+        $statement = $this->db->prepare("select * from data where day like '" . strtolower(date("l")) . "' and platformId = 1 and categoryId =" . $categoryId);
         $statement->execute();
-        $statement->setFetchMode(PDO::FETCH_ASSOC);
         $results = $statement->fetch();
-        print_r($results);
+        return $results;
+    }
+    function getCategoryName($id)
+    {
+        $statement = $this->db->prepare("select name from category where id = 2");
+        $statement->execute();
+        $results = $statement->fetch();
         return $results;
     }
 }

@@ -18,7 +18,7 @@
     <div class="LoadingCalculation">
         <h2>Loading Calculation</h2>
         <div>
-            <a href="/Load_inbound" class="btn">INBOUND</a>
+            <a href="?action=load&plateformId=1" class="btn">INBOUND</a>
             <a href="/Load_outbound" class="btn">OUTBOUND</a>
             <a href="/Load_SupplyProduction" class="btn">SUPPLY PRODUCTION</a>
             <a href="/Load_Backflush" class="btn">BACKFLUSH</a>
