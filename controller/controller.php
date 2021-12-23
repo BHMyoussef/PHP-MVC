@@ -3,7 +3,6 @@ require "models/inputs.php";
 
 function showHome()
 {
-    echo strtolower(date("l"));
     require "Views/home.php";
 }
 
@@ -41,7 +40,7 @@ function showOutput($categoryId, $day)
         $results = calc($data, $categoryId);
         require "Views/Outputs.php";
     } else {
-        require "Views/notfound.php";
+        require "Views/dataNotFound.php";
     }
 }
 
