@@ -1,11 +1,13 @@
 <?php
 class Inputs
 {
+    private $day;
     private $db;
     function __construct()
     {
         try {
             $this->db = new PDO('mysql:host=localhost;dbname=autoGestion', "root", "1234");
+            $this->name = date("l");
         } catch (Exception $e) {
             echo $e->getMessage();
         }
@@ -19,9 +21,9 @@ class Inputs
         return $statement;
     }
 
-    function getData($categoryId)
+    function getData($categoryId, $day = "Monday")
     {
-        $statement = $this->db->prepare("select * from data where day like '" . strtolower(date("l")) . "' and platformId = 1 and categoryId =" . $categoryId);
+        $statement = $this->db->prepare("select * from data where day like '" . strtolower($day) . "' and platformId = 1 and categoryId =" . $categoryId);
         $statement->execute();
         $results = $statement->fetch();
         return $results;

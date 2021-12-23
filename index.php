@@ -32,10 +32,10 @@ try {
                 showLoadCategory();
             }
         } elseif ($_GET["action"] == "showOutput") {
-            if (isset($_GET["plateformId"]) && isset($_GET["categoryId"])) {
+            if (isset($_GET["plateformId"]) && isset($_GET["categoryId"]) && isset($_GET["day"])) {
                 if ($_GET["categoryId"] < 0 || $_GET["categoryId"] > 7)
                     throw new Exception("Category out of range");
-                showOutput($_GET["categoryId"]);
+                showOutput($_GET["categoryId"], $_GET["day"]);
             }
         }
     } else

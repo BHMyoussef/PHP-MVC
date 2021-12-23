@@ -1,61 +1,84 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
 }
-
-.pages {
-  margin-top: 30px;
-  padding: 10px 20px;
+.title {
   text-align: center;
-  margin-bottom: 50px;
+  margin: 2rem auto;
+  font-size: 1.5rem;
+}
+.pages {
+  margin: 2rem auto;
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 700px;
 }
 .pages li {
   display: inline-block;
+  /* margin: 0px -20px; */
 }
 .pages li a {
   text-decoration: none;
-  color: #000;
-  background-color: #ddd;
-  padding: 10px 20px;
-  font-size: 12pt;
+  color: #fff;
+  background-color: rgb(255, 127, 118);
+  padding: 1.2rem 1.5rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  border-radius: 10px;
 }
 .pages li .active {
-  background-color: #aaa;
+  background-color: rgb(240, 65, 65);
+  color: white;
 }
 
 .container {
   display: flex;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 }
-.container .weekSchedule {
-  flex: 1;
-}
-.container .weekSchedule h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
+.container .weekSchedule,
 .container .LoadingCalculation {
-  flex: 1;
+  /* flex: 1; */
+  margin: 1rem;
+  padding: 1.5rem 1.5rem;
+  background: rgb(115, 116, 114);
+  border-radius: 0.5rem;
 }
+.container .weekSchedule h2,
 .container .LoadingCalculation h2 {
+  font-family: sans-serif;
   text-align: center;
-  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #fefcff;
 }
 
 .container div div {
   display: grid;
   gap: 30px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 .container div div a {
-  color: #000;
-  font-size: 12pt;
-  background-color: #ddd;
-  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: rgb(45, 127, 250);
+  background: #333;
+  padding: 1rem 1.3rem;
   text-align: center;
   text-decoration: none;
+  border-radius: 10px;
+}
+.container div div a:hover {
+  background-color: rgb(45, 127, 250);
 }
 
 /* Statistics Page styles */
@@ -73,6 +96,9 @@
   padding: 10px 20px;
   text-decoration: none;
   font-weight: bolder;
+}
+.days li .active {
+  background-color: #999;
 }
 table {
   border-collapse: collapse;
@@ -97,49 +123,51 @@ table tfoot tr td:nth-child(2) {
   background-color: #ff0;
 }
 
-.circle-wrap {
-  width: 150px;
-  height: 150px;
-  background: #fefcff;
-  border-radius: 50%;
-  border: 1px solid #cdcbd0;
+/*  Categories: */
+
+.categorie {
+  margin: 1rem auto;
+  padding: 1rem;
+  background: cornflowerblue;
+  max-width: 800px;
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
 }
 
-.circle-wrap .circle .mask,
-.circle-wrap .circle .fill {
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  border-radius: 50%;
-}
-
-.circle-wrap .circle .mask {
-  clip: rect(0px, 150px, 150px, 75px);
-}
-
-.circle-wrap .inside-circle {
-  width: 122px;
-  height: 122px;
-  border-radius: 50%;
-  background: #d2eaf1;
-  line-height: 120px;
+.categorie a {
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: rgb(45, 127, 250);
+  background: #333;
+  padding: 1rem 1.3rem;
   text-align: center;
-  margin-top: 14px;
-  margin-left: 14px;
-  color: #1e51dc;
-  position: absolute;
-  z-index: 100;
-  font-weight: 700;
-  font-size: 2em;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.categorie a:hover {
+  background-color: rgb(45, 127, 250);
+}
+.categorie a:last-child {
+  grid-auto-flow: row;
 }
 
-/* 3rd progress bar */
-.mask .fill {
-  clip: rect(0px, 75px, 150px, 0px);
-  background-color: #227ded;
+.charts {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
 }
-.mask.full,
-.circle .fill {
-  animation: fill ease-in-out 3s;
-  transform: rotate(135deg);
+.charts canvas {
+  max-width: 250px;
+}
+
+.outPuts {
+  display: flex;
+}
+.outPuts .charts {
+  margin-left: 10rem;
+}
+.outPuts .charts canvas {
+  margin: 0 2rem;
 }

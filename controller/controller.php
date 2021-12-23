@@ -31,10 +31,12 @@ function submitData($platformId, $categoryId, $data)
     if ($result)
         header("Location: /Project");
 }
-function showOutput($categoryId)
+function showOutput($categoryId, $day)
 {
+    $platformId = $_GET["plateformId"];
+    $categoryId = $_GET["categoryId"];
     $db = new Inputs();
-    $data = $db->getData($categoryId);
+    $data = $db->getData($categoryId, $day);
     if ($data) {
         $results = calc($data, $categoryId);
         require "Views/Outputs.php";
