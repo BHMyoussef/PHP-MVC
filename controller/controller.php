@@ -8,11 +8,15 @@ function showHome()
 
 function showCategory()
 {
+    $db = new Inputs();
     $platformId = $_GET["plateformId"];
+    $platformName = $db->getPlatformeName($_GET["plateformId"]);
     require "Views/categories.php";
 }
 function showLoadCategory()
 {
+    $db = new Inputs();
+    $platformName = $db->getPlatformeName($_GET["plateformId"]);
     $platformId = $_GET["plateformId"];
     require "Views/categoriesLoad.php";
 }

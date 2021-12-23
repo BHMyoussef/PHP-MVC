@@ -1,7 +1,7 @@
 <?php $title = "categories" ?>
 <?php $content = ob_start() ?>
 <div class="categories">
-    <h2 class="title"><?= $platformId ?></h2>
+    <h2 class="title"><?= $platformName["name"] ?></h2>
     <div class="categorie">
         <a href="?action=showOutput&plateformId=<?= $platformId ?>&categoryId=1&day=Monday">Raw</a>
         <a href="?action=showOutput&plateformId=<?= $platformId ?>&categoryId=2&day=Monday">TURCKHEIM</a>

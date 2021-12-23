@@ -30,7 +30,14 @@ class Inputs
     }
     function getCategoryName($id)
     {
-        $statement = $this->db->prepare("select name from category where id = 2");
+        $statement = $this->db->prepare("select name from category where id = " . $id);
+        $statement->execute();
+        $results = $statement->fetch();
+        return $results;
+    }
+    function getPlatformeName($id)
+    {
+        $statement = $this->db->prepare("select name from platforme where id = " . $id);
         $statement->execute();
         $results = $statement->fetch();
         return $results;
