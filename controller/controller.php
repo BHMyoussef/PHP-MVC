@@ -54,12 +54,12 @@ function calc($data, $categorieID)
 
     $categoryName = $db->getCategoryName($categorieID);
     // Tableau : bach bla man7tajo chi db wla mlawi
-    $raw              = [3, 10, 20,     10,        0,       2,          4,       10];
-    $cz                 = [3, 10, 27,      10,       0,        2,         4,       10];
-    $turchkeim = [3, 15, 1800, 1800, 1800, 1800, 1800, 10];
-    $tyco            = [4,  10, 20,     5,          30,     2,         4,          5];
-    $gpc             = [3,   2,     0,      5,          1,      2,          2,          5];
-    $coficab      = [3,  10, 10,      5,          5,      3,        20,         5];
+    $raw       = [3,    10, 20,     10,  0,    2,     4,    10];
+    $cz        = [3,    10, 27,     10,  0,    2,     4,    10];
+    $turchkeim = [3,    15, 1800,   1800, 1800, 1800,  1800, 10];
+    $tyco      = [4,    10, 20,     5,   30,   2,     4,    5];
+    $gpc       = [3,    2,  0,      5,   1,    2,     2,    5];
+    $coficab   = [3,    10, 10,     5,   5,    3,     20,   5];
     switch (strtolower($categoryName["name"])) {
         case 'raw':
             return calcule($data, $raw);

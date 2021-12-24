@@ -17,7 +17,14 @@ class Inputs
     {
         $statement = $this->db->prepare("insert into data 
             values (:platformId,:categoryId,:day,:nbrTrucks,:nbrPosition,:nbrPallets)");
-        $statement->execute(array(":platformId" => $platformId, ":categoryId" => $categoryId, ":day" => $data["day"], ":nbrTrucks" => $data["nbrTrucks"], ":nbrPosition" => $data["nbrPosition"], ":nbrPallets" => $data["nbrPallets"]));
+        if ($statement->execute(array(":platformId" => $platformId, ":categoryId" => $categoryId, ":day" => $data["day"], ":nbrTrucks" => $data["nbrTrucks"], ":nbrPosition" => $data["nbrPosition"], ":nbrPallets" => $data["nbrPallets"])))
+            echo "true";
+        else {
+            $statement = $this->db->prepare("update data set nbrTrucks = :nbrTrucks, nbrPosition = :nbrPosition, nbrPallets=:nbrPallets
+                where platformId=:platformId and categoryId=:categoryId and day like :day");
+            $statement->execute(array(":platformId" => $platformId, ":categoryId" => $categoryId, ":day" => $data["day"], ":nbrTrucks" => $data["nbrTrucks"], ":nbrPosition" => $data["nbrPosition"], ":nbrPallets" => $data["nbrPallets"]));
+        }
+
         return $statement;
     }
 
