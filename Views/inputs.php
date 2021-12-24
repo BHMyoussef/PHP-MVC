@@ -1,6 +1,6 @@
 <?php $title = "inputs" ?>
 <?php ob_start() ?>
-<div class="days">
+<div class="days jours">
     <h2 class="title">Day:</h2>
     <form action="index.php?action=submitData&plateformId=<?= $platformId ?>&categoryId=<?= $categoryId ?>" method="POST">
         <div class="day">

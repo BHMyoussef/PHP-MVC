@@ -56,12 +56,12 @@
             </tr>
             <tr>
                 <td>Number of strokeepers Required</td>
-                <td><?= $results[9] | 0 ?></td>
+                <td><?= ceil($results[9]) ?></td>
             </tr>
         </tfoot>
     </table>
     <div class="charts">
-        <canvas id="chart1" val=<?= $results[10] ?>></canvas>
+        <canvas id="chart1" val=<?= $results[10] * 100 ?>></canvas>
         <canvas id="chart2" val=<?= $results[11] ?>></canvas>
 
     </div>

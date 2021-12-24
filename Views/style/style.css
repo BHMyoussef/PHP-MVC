@@ -100,6 +100,7 @@
 .days li .active {
   background-color: #999;
 }
+
 table {
   border-collapse: collapse;
   font-size: 12pt;
@@ -171,3 +172,85 @@ table tfoot tr td:nth-child(2) {
 .outPuts .charts canvas {
   margin: 0 2rem;
 }
+
+/* ==================================== */
+.jours {
+  text-align: center;
+  margin-bottom: 50px;
+  margin: 2rem 5rem;
+  padding: 1rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: #8c8b8c;
+}
+.jours li {
+  display: inline-block;
+}
+.jours li a {
+  color: #000;
+  font-size: 14pt;
+  background-color: #ddd;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.day {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+.inputs {
+  margin: 2rem 5rem;
+  padding: 1rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: #8c8b8c;
+}
+.inputs .input {
+  margin: 0.5rem auto;
+  padding: 0.5rem 1rem;
+  font-size: 1.3rem;
+}
+.inputs .input input {
+  border-radius: 0.5rem;
+  padding: 0.5rem 0rem;
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 200px;
+  counter-increment: 10;
+  border: none;
+  outline: none;
+}
+
+button.confirm {
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+button.confirm:hover {
+  background-color: #666166;
+  color: #fff;
+}
+
+input[type="radio"] {
+  width: 20px;
+  cursor: pointer;
+}
+label {
+  margin: 0 20px;
+  text-align: left;
+  padding: 0 10px;
+  cursor: pointer;
+}
+/* ===================================== */
