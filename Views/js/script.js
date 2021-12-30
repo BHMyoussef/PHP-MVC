@@ -7,11 +7,12 @@ let val1 = ct1.getAttribute("val");
 let val2 = ct2.getAttribute("val");
 const vals = [val1,val2];
 
-let labels = ['one','two'];
+let labels = ["team's Occupancy Rate ","Occupancy Rate Of Number Proposed"];
 let colorHex = ['#253D5B', '#ddd'];
 
 const ctxs = [ctx1, ctx2];
 ctxs.forEach((ctx,i) => {
+  console.log("test")
 
 let myChart = new Chart(ctx, {
   type: 'doughnut',
@@ -20,7 +21,7 @@ let myChart = new Chart(ctx, {
       data: [vals[i], 100 - vals[i]],
       backgroundColor: colorHex
     }],
-    labels: labels
+    labels: [labels[i]]
   },
   options: {
     responsive: true,
